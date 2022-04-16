@@ -1,37 +1,6 @@
-import { mergeTrees } from "./algorithm/617. Merge Two Binary Trees";
-import TreeNode from "./algorithm/TreeNode";
+import assert = require("assert");
+import { addDigits } from "./algorithm/258. Add Digits";
 
-const r1 = new TreeNode(
-  1,
-  new TreeNode(
-    3,
-    new TreeNode(
-      5
-    ),
-  ),
-  new TreeNode(
-    2
-  )
-);
+console.log(addDigits(38));
 
-const r2 = new TreeNode(
-  2,
-  new TreeNode(
-    1,
-    null,
-    new TreeNode(
-      4
-    )
-  ),
-  new TreeNode(
-    3,
-    null,
-    new TreeNode(
-      7
-    )
-  )
-)
-
-console.log(
-  JSON.stringify(mergeTrees(r1,r2))
-);
+assert.equal(addDigits(38), 2, "Not equal");
