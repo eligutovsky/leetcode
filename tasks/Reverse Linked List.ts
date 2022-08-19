@@ -1,4 +1,4 @@
-import ListNode from "./ListNode";
+import ListNode from "../typings/ListNode";
 
 export function reverseList(head: ListNode | null): ListNode | null {
   if (head == null || head.next == null) 
