@@ -1,7 +1,4 @@
-class TrieNode {
-  map = new Map<string, TrieNode>();
-  word?: string;
-}
+import { TrieNode } from "../typings/TrieNode";
 
 class Trie {
   root = new TrieNode();

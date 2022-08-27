@@ -1,10 +1,4 @@
-class TrieNode {
-  word: string | undefined;
-  map: Map<string, TrieNode>;
-  constructor() {
-    this.map = new Map<string, TrieNode>();
-  }
-}
+import { TrieNode } from "../typings/TrieNode";
 
 class Trie {
     root: TrieNode;
