@@ -8,10 +8,13 @@ enum Colors {
 const colorize = (text: string, color: Colors) => {
     return `${color}${text}\x1b[0m`;
 }
+let callCounter = 0
 
 export const expect = (arg1: any, arg2: any) => {
+    callCounter++
     if (arg1 !== arg2) {
-        console.error(colorize(`Failed. Actual: ${arg1}, Expected: ${arg2}`, Colors.Red));
+        console.error(colorize(`Failed ${callCounter}. Actual: ${arg1}, Expected: ${arg2}`, Colors.Red));
+    } else {
+        console.info(colorize(`Passed ${callCounter}. Actual: ${arg1}, Expected: ${arg2}`, Colors.Green));
     }
-    console.info(colorize(`Passed. Actual: ${arg1}, Expected: ${arg2}`, Colors.Green));
 }
