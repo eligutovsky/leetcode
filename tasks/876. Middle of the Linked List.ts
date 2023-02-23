@@ -1,4 +1,4 @@
-import ListNode from "./ListNode";
+import ListNode from "../typings/ListNode";
 
 export function middleNode(head: ListNode | null): ListNode | null {
   let tortoise, rabbit;
@@ -8,4 +8,4 @@ export function middleNode(head: ListNode | null): ListNode | null {
     rabbit = rabbit.next?.next;
   }
   return tortoise;
-};
+}
