@@ -1,10 +1,8 @@
-import { TrieNode } from "../typings/TrieNode";
+import { TrieNode } from "../datastructures/TrieNode";
 
 class Trie {
   root = new TrieNode();
-  constructor() {
-
-  }
+  constructor() {}
 
   insert(word: string): void {
     let node = this.root;
@@ -41,9 +39,9 @@ class Trie {
 }
 
 /**
-* Your Trie object will be instantiated and called as such:
-* var obj = new Trie()
-* obj.insert(word)
-* var param_2 = obj.search(word)
-* var param_3 = obj.startsWith(prefix)
-*/
+ * Your Trie object will be instantiated and called as such:
+ * var obj = new Trie()
+ * obj.insert(word)
+ * var param_2 = obj.search(word)
+ * var param_3 = obj.startsWith(prefix)
+ */
