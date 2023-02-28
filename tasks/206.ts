@@ -1,4 +1,4 @@
-import ListNode from "../typings/ListNode";
+import ListNode from "../datastructures/ListNode";
 import { expect } from "../utils/expect";
 
 function reverseList(head: ListNode | null): ListNode | null {

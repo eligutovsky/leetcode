@@ -1,4 +1,4 @@
-import ListNode from "../typings/ListNode";
+import ListNode from "../datastructures/ListNode";
 
 export function middleNode(head: ListNode | null): ListNode | null {
   let tortoise, rabbit;

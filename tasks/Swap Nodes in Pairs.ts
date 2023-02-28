@@ -1,4 +1,4 @@
-import ListNode from "../typings/ListNode";
+import ListNode from "../datastructures/ListNode";
 
 export function swapPairs(head: ListNode | null): ListNode | null {
   if (head == null || head.next == null) return head;
@@ -7,4 +7,4 @@ export function swapPairs(head: ListNode | null): ListNode | null {
   f.next = swapPairs(s.next);
   s.next = f;
   return s;
-};
+}

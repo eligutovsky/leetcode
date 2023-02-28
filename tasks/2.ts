@@ -1,4 +1,4 @@
-import ListNode from "../typings/ListNode";
+import ListNode from "../datastructures/ListNode";
 
 function addTwoNumbers(
   l1: ListNode | null,
