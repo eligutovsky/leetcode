@@ -1,13 +1,19 @@
+import { expect } from "../utils/expect";
+
 function checkInclusion(s1: string, s2: string): boolean {
   if (s1.length > s2.length) {
       return false;
   }
+  // We do not care about order of the chars but we do care about their count.
+  // Keep all required letters in a map with their count value.
   const map: Map<string, number> = new Map();
   for (const char of s1) {
       map.set(char, map.get(char) + 1 || 1);
   }
+
   let start: number = 0;
   let lettersToContain = map.size;
+
   for (let end = 0; end < s2.length; end++) {
       const char = s2[end];
       if (map.has(char)) {
@@ -33,3 +39,6 @@ function checkInclusion(s1: string, s2: string): boolean {
   // T.C: O(M + N), M = length of s1, N = length of s2
   // S.C: O(M)
 };
+
+expect(checkInclusion("ab", "eidbaooo"), true);
+expect(checkInclusion("ab", "eidboaoo"), false);
